@@ -294,6 +294,47 @@ return [
             ],
         ],
 
+        'group_file_reference_1' => [
+            'exclude' => 1,
+            'label' => 'group_file_referencee_1',
+            'config' => [
+                'type' => 'group',
+                'internal_type' => 'file',
+                'allowed' => 'jpg, jpeg, png, gif',
+                'disallowed' => 'ai',
+                'size' => 3,
+                'uploadfolder' => 'uploads/tx_styleguide/',
+                'max_size' => 2000,
+            ],
+        ],
+        'group_file_reference_2' => [
+            'exclude' => 1,
+            'label' => 'group_file_reference_2 hideDeleteIcon, fileUpload disabled',
+            'config' => [
+                'type' => 'group',
+                'internal_type' => 'file',
+                'allowed' => 'jpg, jpeg, png, gif',
+                'size' => 3,
+                'uploadfolder' => 'uploads/tx_styleguide/',
+                'hideDeleteIcon' => true,
+                'fieldWizard' => [
+                    'fileUpload' => [
+                        'disabled' => true,
+                    ],
+                ],
+            ],
+        ],
+        'group_file_reference_3' => [
+            'exclude' => 1,
+            'label' => 'group_file_reference_3 size=1',
+            'config' => [
+                'type' => 'group',
+                'internal_type' => 'file',
+                'allowed' => 'jpg, jpeg, png, gif',
+                'size' => 1,
+                'uploadfolder' => 'uploads/tx_styleguide/',
+            ],
+        ],
 
         'group_folder_1' => [
             'exclude' => 1,
@@ -438,6 +479,8 @@ return [
                     group_db_1, group_db_2, group_db_9, group_db_3, group_db_8, group_db_4, group_db_5, group_db_6, group_db_7,
                 --div--;internal_type=file,
                     group_file_1, group_file_2, group_file_3,
+                --div--;internal_type=file_reference,
+                    group_file_reference_1, group_file_reference_2, group_file_reference_3,
                 --div--;internal_type=folder,
                     group_folder_1,
                 --div--;in flex,
