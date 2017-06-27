@@ -296,14 +296,13 @@ return [
 
         'group_file_reference_1' => [
             'exclude' => 1,
-            'label' => 'group_file_referencee_1',
+            'label' => 'group_file_reference_1',
             'config' => [
                 'type' => 'group',
-                'internal_type' => 'file',
+                'internal_type' => 'file_reference',
                 'allowed' => 'jpg, jpeg, png, gif',
                 'disallowed' => 'ai',
                 'size' => 3,
-                'uploadfolder' => 'uploads/tx_styleguide/',
                 'max_size' => 2000,
             ],
         ],
@@ -312,10 +311,9 @@ return [
             'label' => 'group_file_reference_2 hideDeleteIcon, fileUpload disabled',
             'config' => [
                 'type' => 'group',
-                'internal_type' => 'file',
+                'internal_type' => 'file_reference',
                 'allowed' => 'jpg, jpeg, png, gif',
                 'size' => 3,
-                'uploadfolder' => 'uploads/tx_styleguide/',
                 'hideDeleteIcon' => true,
                 'fieldWizard' => [
                     'fileUpload' => [
@@ -329,10 +327,9 @@ return [
             'label' => 'group_file_reference_3 size=1',
             'config' => [
                 'type' => 'group',
-                'internal_type' => 'file',
+                'internal_type' => 'file_reference',
                 'allowed' => 'jpg, jpeg, png, gif',
                 'size' => 1,
-                'uploadfolder' => 'uploads/tx_styleguide/',
             ],
         ],
 
@@ -425,6 +422,29 @@ return [
                                         </el>
                                     </ROOT>
                                 </sFile>
+
+                                <sFileReference>
+                                    <ROOT>
+                                        <type>array</type>
+                                        <TCEforms>
+                                            <sheetTitle>internal_type=file_reference</sheetTitle>
+                                        </TCEforms>
+                                        <el>
+                                            <group_file_reference_1>
+                                                <TCEforms>
+                                                    <label>group_file_reference_1</label>
+                                                    <config>
+                                                        <type>group</type>
+                                                        <internal_type>file_reference</internal_type>
+                                                        <allowed>jpg, jpeg, png, gif</allowed>
+                                                        <size>3</size>
+                                                        <uploadfolder>uploads/tx_styleguide/</uploadfolder>
+                                                    </config>
+                                                </TCEforms>
+                                            </group_file_reference_1>
+                                        </el>
+                                    </ROOT>
+                                </sFileReference>
 
                                 <sSection>
                                     <ROOT>
